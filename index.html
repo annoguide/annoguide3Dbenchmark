@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="">
+  <meta property="og:title" content="Towards Auto-Annotation from Annotation Guidelines: A Benchmark through 3D LiDAR Detection" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/twitter-teaser-tails.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="Towards Auto-Annotation from Annotation Guidelines: A Benchmark through 3D LiDAR Detection">
+  <meta name="twitter:description" content="">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/twitter-teaser-tails.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="3D Detection, Data Annotation, Few-Shot Learning, Multi-Modal Learning, Foundation Model Adaptation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Towards Auto-Annotation from Annotation Guidelines: A Benchmark through 3D LiDAR Detection</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Towards Auto-Annotation from Annotation Guidelines: A Benchmark through 3D LiDAR Detection
+            </h1>
+
+            <!-- <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Zhejiang University<br></span>
+              <span class="author-block"><sup>2</sup>University of Macau<br></span>
+            </div> -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/annoguide/annoguide3Dbenchmark" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://github.com/annoguide/annoguide3Dbenchmark" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>                
+              </div>
+            <!-- </div>
+            <h1><strong style="color: red; font-size: x-large;">XXXXXX</strong></h1>
+          </div> -->
+        </div>
+      </div>  
+    </div>
+  </section>
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p style="text-align: justify;">
+              A crucial yet under-appreciated prerequisite in machine learning solutions for real-applications is data annotation: 
+              human annotators are hired to manually label data according to detailed, expert-crafted guidelines. 
+              This is often a laborious, tedious, and costly process. To study methods for facilitating data annotation, 
+              we introduce a new benchmark AnnoGuide: Auto-Annotation from Annotation Guidelines. 
+              It aims to evaluate automated methods for data annotation directly from expert-defined annotation guidelines, 
+              eliminating the need for manual labeling. As a case study, we repurpose the well-established nuScenes dataset, 
+              commonly used in autonomous driving research, which provides comprehensive annotation guidelines for labeling LiDAR point clouds with 3D cuboids across 18 object classes. 
+              hese guidelines include a few visual examples and textual descriptions, but no labeled 3D cuboids in LiDAR data, 
+              making this a novel task of multi-modal few-shot 3D detection without 3D annotations. 
+              The advances of powerful foundation models (FMs) make AnnoGuide especially timely, as FMs offer promising tools to tackle its challenges. 
+              We employ a conceptually straightforward pipeline that (1) utilizes open-source FMs for object detection and segmentation in RGB images, 
+              (2) projects 2D detections into 3D using known camera poses, 
+              and (3) clusters LiDAR points within the frustum of each 2D detection to generate a 3D cuboid. 
+              Starting with a non-learned solution that leverages off-the-shelf FMs, 
+              we progressively refine key components and achieve significant performance improvements, 
+              boosting 3D detection mAP from 12.1 to 21.9! Nevertheless, 
+              our results highlight that AnnoGuide remains an open and challenging problem, 
+              underscoring the urgent need for developing LiDAR-based FMs. 
+              We release our code and models at GitHub: https://annoguide.github.io/annoguide3Dbenchmark
+            </ul>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <section class="section hero is-light2">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Problem Formulation and Benchmarking Protocol</h2>
+          <!-- <h2 class="title is-4">Strong Correlation of Concept Frequency and Accuracy</h2> -->
+          <div class="content has-text-justified">
+
+            <div class="item">
+              <!-- Your image here -->
+              <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+              <img src="static/images/annotation_guidelines_v5_00.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                Screenshots of annotation guidelines released with the  nuScenes dataset.
+                (a) The guidelines instruct human annotators to label LiDAR points with 3D cuboids for specific object classes.
+                (b) Each object class is defined by a few visual examples and nuanced textual descriptions (ref. the red box) without 3D cuboid annotations. Human annotators must interpret and apply these guidelines to manually generate 3D cuboids.
+                (c) We visualize the 3D annotations in both RGB images and the Bird's-Eye-View (BEV) of the LiDAR point cloud.
+              </p>
+              <!-- <img src="static/images/promptgpt.png" alt="Image illustrating ChatGPT interaction with VLMs"
+                style="width: 850px; height: auto; display: block; margin: 0 auto;"> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light2">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Methodology: Lifting 2D Detections to 3D</h2>
+          <div class="content has-text-justified">
+            <div class="item">
+              <!-- Your image here -->
+              <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+              <img src="static/images/our_pipeline_v10_00.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                We adopt a pipeline to solve AnnoGuide by adapting open-source foundation models (FMs). 
+                Specifically, over the visual examples and textual descriptions that define object classes of interest, we adapt a Vision-Language Model (VLM) and a  Vision Foundation Model (VFM)  for object detection and segmentation. 
+                The adapted FMs produce decent 2D detections on unlabeled RGB frames.
+                With the aligned LiDAR and RGB frames, we lift each 2D detection to 3D, locate corresponding LiDAR points, and generate a 3D cuboid as the 3D detection.
+                We delve into FM adaption and 3D cuboid generation, and improve them in this work.
+              </p>
+              <!-- <img src="static/images/promptgpt.png" alt="Image illustrating ChatGPT interaction with VLMs"
+                style="width: 850px; height: auto; display: block; margin: 0 auto;"> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light2">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h3 class="title is-4">2D Detection by Multi-Modal Few-Shot Finetuning</h3>
+          <div class="content has-text-justified">
+
+            <div class="item">
+              <!-- Your image here -->
+              <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+              <img src="static/images/prompt_refining_v2_00.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                For each targeted class name, we use a pretrained VLM (GPT-4o in this work) to find a list of terms that match the textual description and visual examples provided in the annotation guidelines. 
+                We then test each term and its combinations to search the best one that maximizes the zero-shot detection performance of a foundational object detector (GroundingDINO in this work) on the validation set.
+                We use the best term (or term combination) to finetune the foundational detector,
+                yielding notable improved performance.
+              </p>
+              <!-- <img src="static/images/promptgpt.png" alt="Image illustrating ChatGPT interaction with VLMs"
+                style="width: 850px; height: auto; display: block; margin: 0 auto;"> -->
+            </div>
+          </div>
+          <div class="content has-text-justified">
+
+            <div class="item">
+              <!-- Your image here -->
+              <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+              <img src="static/images/Table_1.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                Different strategies of finetuning foundational 2D detectors yield different 3D detection performances.
+                For 3D cuboid generation, we use CM3D.
+                Recall that we refine class names using an off-the-shelf VLM.
+                With the GroundingDINO (GD) 2D detector, replacing the original class names (``o-name'') with refined class names (``r-name'') yields better zero-shot detection performance.
+                Importantly, finetuning GD (ft-GD) using r-name performs the best.                
+              </p>
+              <!-- <img src="static/images/promptgpt.png" alt="Image illustrating ChatGPT interaction with VLMs"
+                style="width: 850px; height: auto; display: block; margin: 0 auto;"> -->
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light2">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h3 class="title is-4">3D Cuboid Generation by Multi-Hypothesis Testing</h3>
+          <div class="content has-text-justified">
+
+            <div class="item">
+              <!-- Your image here -->
+              <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+              <img src="static/images/challenge_3D_grouping_v3_00.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                Generating a 3D cuboid based on LiDAR points is challenging as points can be from occlusders and backgrounds.
+                For example, (a) LiDAR points projected on a  bicycle can be from background through wheels;
+                (b) points projected on a car can be from a fence occluding the car;
+                (c-d) points projected on a car can be background through the windows and windshield of the car.    
+              </p>
+              <!-- <img src="static/images/promptgpt.png" alt="Image illustrating ChatGPT interaction with VLMs"
+                style="width: 850px; height: auto; display: block; margin: 0 auto;"> -->
+            </div>
+          </div>
+          <div class="content has-text-justified">
+            <div class="item">
+              <!-- Your image here -->
+              <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+              <img src="static/images/MHT_fitting_v5_00.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                We generate a 3D cuboid for the 2D detected object through Multi-Hypothesis Testing (MHT).
+                In the frustum projected from the 2D detection,
+                we locate the LiDAR points that lie in the mask of the 2D detected object (when projected from 3D to 2D image plane).
+                For the recognized car, we use the prior size obtained by prompting GPT-4o to fit the LiDAR points in 3D BEV.
+                We define a list of angular rotations and translation step sizes to measure their point coverage in BEV and IoU on the image plane, and find the best-fitting one that yields the highest point coverage and IoU.
+                Our method outperforms existing ones.
+              </p>
+              <!-- <img src="static/images/promptgpt.png" alt="Image illustrating ChatGPT interaction with VLMs"
+                style="width: 850px; height: auto; display: block; margin: 0 auto;"> -->
+            </div>
+          </div>
+
+          <div class="content has-text-justified">
+            <div class="item">
+              <!-- Your image here -->
+              <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+              <img src="static/images/Table_2.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                We compare different 3D cuboid generation methods,
+                including our heuristic baseline, CM3D, 
+                a 3D detector CenterPoint (CP) trained on the Argoverse2 LiDAR data, and our MHT-based method.
+                Surprisingly, the trained 3D detector CP yields poor performance.
+                We believe the reason is the discrepancy between LiDAR models of the nuScenes and Argoverse2 datasets. We compare the specifics of the LiDAR models of the Supplement.
+                Our MHT-based method performs the best.
+              </p>
+              <!-- <img src="static/images/promptgpt.png" alt="Image illustrating ChatGPT interaction with VLMs"
+                style="width: 850px; height: auto; display: block; margin: 0 auto;"> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section hero is-light2">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">More Technical Enhancements</h2>
+          <div class="content has-text-justified">
+
+            <div class="item">
+              <!-- Your image here -->
+              <!-- <img src="static/images/imagenet_1k_freq.png" alt="1" style="width: 250px; height: auto; display: block; margin: 0 auto;"/>-->
+              <img src="static/images/Table_4.png" alt="1" style="width: auto; height: auto; display: block; margin: 0 auto;"/> 
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; margin-top: 10px; color: #333;">
+                Our proposed techniques improve 3D cuboid generation.
+                The first row shows results of a method that adopts our finetuned GroundingDINO for 2D detection
+                and CM3D~\cite{khurana2024shelf} for 3D cuboid generation.
+                MHT standards for Multi-Hypothesis Testing for 3D cuboid generation;
+                ``SA.'' uses class-aware sweep aggregation;
+                S<sub>3D</sub> incorporates 3D geometric cues to score generated 3D cuboids;
+                ``track'' means using 3D tracks to refine scores of generated cuboids.
+                Results demonstrate the effectiveness of each technique in improving 3D cuboid generation.                
+              </p>
+              <!-- <img src="static/images/promptgpt.png" alt="Image illustrating ChatGPT interaction with VLMs"
+                style="width: 850px; height: auto; display: block; margin: 0 auto;"> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Qualitative Results -->
+  <section class="section hero is-light2">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4">Visualizations</h2>
+          <div class="content">
+
+            <div class="item">
+              <!-- Your image here -->
+              <p style="text-align: justify; font-size: 16px; line-height: 1.5; color: #333;">
+                Visualization of detection results on four testing examples.
+                For each example, we display 2D detections, and 3D detections (i.e., the generated 3D cuboids) projected onto the RGB image and the BEV of LiDAR data.
+                Visual results show that our method decently detects objects that are in far field and small in size, which are usually challenging to detect.
+              </p>
+              <img src="static/images/visual-results-v3_00.png" alt="1" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Qualitative Results -->
+
+
+</body>
+
+</html>
