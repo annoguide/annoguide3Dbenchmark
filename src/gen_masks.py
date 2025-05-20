@@ -1,6 +1,4 @@
 import sys
-sys.path.insert(0, '/home/zjlab/myc/code/cm3d/src/nuscenes/CenterNet2/')
-sys.path.insert(0, '/home/zjlab/myc/code/cm3d/src/nuscenes/Detic/')
 import json
 import os
 import cv2

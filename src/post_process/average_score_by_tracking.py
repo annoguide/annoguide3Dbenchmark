@@ -4,8 +4,6 @@ import mmcv
 from argparse import ArgumentParser
 import pyquaternion
 
-from mmdet3d.datasets import NuScenesDataset
-from mmdet3d.core import LiDARInstance3DBoxes
 from nuscenes import NuScenes
 from nuscenes.utils.data_classes import Box as NuScenesBox
 
@@ -23,6 +21,31 @@ class_names = [
     'adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility', 
     'pushable_pullable', 'debris', 'traffic_cone', 'barrier'
 ]
+
+DefaultAttribute = {
+    'trailer': 'vehicle.parked',
+    'truck': 'vehicle.parked',
+    'bus': 'vehicle.stopped',
+    'construction_vehicle': 'vehicle.parked',
+    'barrier': '',
+    'traffic_cone': '',
+    "adult" : 'pedestrian.moving',
+    "child" : 'pedestrian.moving',
+    "stroller" : '',
+    "personal_mobility" : '',
+    "police_officer" : 'pedestrian.moving',
+    "construction_worker" : 'pedestrian.moving',
+    "car" : 'vehicle.parked',
+    "motorcycle" : 'cycle.without_rider',
+    "bicycle" : 'cycle.without_rider',
+    "emergency_vehicle" : 'vehicle.parked',
+    "pushable_pullable" : '',
+    "debris" : '',
+    
+    'vehicle': 'vehicle.parked',
+    'pedestrian': 'pedestrian.moving',
+    'movable': '',        
+}
 
 def load_annotations(ann_file):
     """Load annotations from ann_file.
@@ -120,14 +143,14 @@ def format_bbox(results, data_infos, output_path):
                 elif name in ['bicycle', 'motorcycle']:
                     attr = 'cycle.with_rider'
                 else:
-                    attr = NuScenesDataset.DefaultAttribute[name]
+                    attr = DefaultAttribute[name]
             else:
                 if name in ['pedestrian']:
                     attr = 'pedestrian.standing'
                 elif name in ['bus']:
                     attr = 'vehicle.stopped'
                 else:
-                    attr = NuScenesDataset.DefaultAttribute[name]
+                    attr = DefaultAttribute[name]
             nusc_anno = dict(
                 sample_token=sample_token,
                 translation=box.center.tolist(),

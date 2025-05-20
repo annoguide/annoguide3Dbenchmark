@@ -223,7 +223,6 @@ def findVRange(img, id, undistort_color_img, is_car):
             min_v = pt[0][1]
 
     v_thresh = int(round(min_v + 3 / 3 * (max_v - min_v)))
-    # cv2.imwrite(os.path.join( '/home/zjlab/zcr/BEVHeight/results/bev_lidar/', str(id) + '_test.jpg'), img)
 
     return v_thresh
 
