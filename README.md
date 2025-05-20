@@ -144,4 +144,4 @@ To set up the repository, follow these steps:
 
 2. **3D Detection Results** 
 
-    Download through [GoogleDrive](https://drive.google.com/file/d/1p39B3_ZCE5OKRYLZKMifvinYY0kzvqmo/view?usp=sharing)
+    Download through [GoogleDrive](https://drive.google.com/file/d/1aVtFWD6F73CD_dsM3nW2IAVSCKfsAaSz/view?usp=drive_link)
