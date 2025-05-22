@@ -61,7 +61,10 @@ To set up the repository, follow these steps:
 ## Models
 1. **GroundingDINO**
 
-    Download through MMDetection: [MMDetection Repository](https://github.com/open-mmlab/mmdetection)
+    The original model can be downloaded through MMDetection: [MMDetection Repository](https://github.com/open-mmlab/mmdetection)
+    
+    The finetuned model with refined class name can be downloaded through [GoogleDrive](https://drive.google.com/file/d/1Y0Xcr6u9F8-FmQqR65oQBhMRkMWoHu4m/view?usp=drive_link)
+
 
 2. **Segment Anything Model (SAM)** 
 
